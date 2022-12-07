@@ -7,15 +7,17 @@ async def test(text: str) -> str:
     return text
 
 async def main():
-    await asy.gather(test("Hello"))
+    print("Time started at: ", time.strftime('%X'))
 
-    task_one = asy.create_task(function("Task One"))
-    task_two = asy.create_task(function("Task Two"))
+    print(await asy.gather(test("Hello")))
 
-    
+    task_one = asy.create_task(test("Task One"))
+    task_two = asy.create_task(test("Task Two"))
 
+    print(await task_one, task_two)
 
-
+    print("World")
+    print("Time finished at: ", time.strftime('%X'))
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asy.run(main())
