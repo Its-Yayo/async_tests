@@ -22,7 +22,7 @@ async def main():
     loop = asy.get_event_loop()
     fut = loop.create_future() 
 
-    result = fut.result()
+    result = fut.result() 
     
     while True: 
         try:    
