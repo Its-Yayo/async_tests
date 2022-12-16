@@ -1,6 +1,6 @@
 # async_tests
 
-### Testing objects with Async Programing in Python. 
+### Testing objects with Async Programming in Python. 
 - Tasks
 - Courutines
 - Futures
