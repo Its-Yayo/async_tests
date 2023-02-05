@@ -23,15 +23,17 @@ async def main():
     fut = loop.create_future() 
 
     result = fut.result() 
+
     
+    """
     while True: 
         try:    
             task = loop.create_task(
                 set_future(fut, 2, "..future", result)
             )
         except asy.InvalidStateError:
-            continue
-
+            continue    
+    """
 
 if __name__ == "__main__":
     asy.run(main())
